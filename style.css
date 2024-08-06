@@ -1,0 +1,306 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background: radial-gradient(circle, #F5F5DC 20%, #FFC0CB 100%);
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+
+header {
+    background-image: url(./img/header.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* filter: grayscale(50%) brightness(120%) contrast(80%); */
+    filter: brightness(120%) contrast(90%) drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+    height: 25vw;
+    color: #FFC0CB;
+    padding-top: 5%;
+    text-transform: capitalize;
+}
+
+header .header-text {
+    width: 40%;
+    margin: auto;
+    padding: 3%;
+    text-align: center;
+    background-color: hsla(329, 19%, 24%, 0.568);
+    border-radius: 22px;
+}
+
+header .header-text h1 {
+    font-size: 4.8vw;
+    text-transform: uppercase;
+}
+
+header .header-text h2 {
+    font-size: 2vw;
+    margin-top: 2%;
+}
+.search-bar{
+    width: 60%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 4%;
+}
+.search-bar #searchInput{
+    width: 70%;
+    padding: 1%;
+    font-size: 1.5vw;
+}
+.search-bar button{
+    width: 25%;
+    padding: 1.3%;
+    background: #FFC0CB;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    top: -25px;
+}
+
+.slider {
+    display: flex;
+    cursor: grab;
+    overflow: auto;
+    /* Allows scrolling */
+    scroll-behavior: smooth;
+    /* Smooth scroll effect */
+    position: relative;
+    z-index: 2;
+    overflow-y: hidden;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+    /* Hides scrollbar in WebKit browsers */
+}
+
+.slide {
+    min-width: 18%;
+    /* Adjust width as needed */
+    margin-right: 3%;
+    background-color: #f0f0f0;
+    /* Light background color for slides */
+    border: 1px solid #ddd;
+    /* Border for slides */
+    padding: 0%;
+    box-sizing: border-box;
+    text-align: center;
+    height: 15vw;
+    border-radius: 24px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Aligns items at the bottom */
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+.slide:hover{
+    transform: translateY(-10px);
+}
+.slide h1 {
+    font-size: 1.8vw;
+    padding-bottom: 4%;
+    padding-top: 4%;
+    width: 100%;
+    background-color:  hsla(329, 19%, 24%, 0.5);
+    color: #F5F5DC;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.slider-container .slider .category-1 {
+    background-image: url(./img/nature.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-container .slider .category-2 {
+    background-image: url(./img/underwater.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-container .slider .category-3 {
+    background-image: url(./img/wildlife.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-container .slider .category-4 {
+    background-image: url(./img/urban.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-container .slider .category-5 {
+    background-image: url(./img/technology.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-container .slider .category-6 {
+    background-image: url(./img/travel.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-container .slider .category-7 {
+    background-image: url(./img/abstract.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider-container .slider .category-8 {
+    background-image: url(./img/blackandwhite.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.gallery-item {
+    position: relative;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    border: solid;
+    width: 20vw;
+    height: 20vw;
+}
+.gallery-item:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    
+}
+/* .gallery-item:nth-child(even)  {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+    display: block;
+}
+.gallery-item:nth-child(odd) {
+    width: 20vw;
+    height: 15vw;
+    object-fit: cover;
+    display: block;
+}
+.gallery-item:nth-child(3n)  {
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    display: block;
+}
+.gallery-item:nth-child(3n+2)  {
+    width: 25%;
+    height: 30vw;
+    object-fit: cover;
+    display: block;
+} */
+.gallery-item img{
+    width: 100%;
+    height:inherit;
+}
+
+.download-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .download-overlay {
+    opacity: 1;
+}
+
+.download-button {
+    background: #FFC0CB;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.tags{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2%;
+    padding: 1%;
+    text-transform: capitalize;
+    background-color: #F5F5DC;
+    width: 90%;
+    margin: auto;
+    font-size: 1.5vw;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.tag:hover{
+    border-bottom: solid #FFC0CB;
+}
+footer{
+    width: 100%;
+    background-color: #333;
+    margin-top: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    
+}
+footer ul li{
+    margin: 1%;
+    font-size: 3vw;
+    border: solid #F5F5DC;
+    padding: 1%;
+    width: 3vw;
+    height: 3vw;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+footer ul li a i{
+    color: #333;
+}
+footer p{
+    color: #F5F5DC;
+    text-align: center;
+    padding: 1%;
+    font-size: 1.5vw;
+    margin-top: 1%;
+}

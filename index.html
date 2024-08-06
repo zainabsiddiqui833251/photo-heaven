@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo heaven</title>
+    <!-- css links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- aos css link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-text">
+            <h1>photo heaven</h1>
+            <h2>your gateway to stunning visuals</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button type="button" onclick="searchImages()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide category-1">
+                <h1>nature</h1>
+            </div>
+            <div class="slide category-2">
+                <h1>underwater</h1>
+            </div>
+            <div class="slide category-3">
+                <h1>wildlife</h1>
+            </div>
+            <div class="slide category-4">
+                <h1>urban</h1>
+            </div>
+            <div class="slide category-5">
+                <h1>technology</h1>
+            </div>
+            <div class="slide category-6">
+                <h1>travel</h1>
+            </div>
+            <div class="slide category-7">
+                <h1>abstract</h1>
+            </div>
+            <div class="slide category-8">
+                <h1>black & white</h1>
+            </div>
+        </div>
+    </div>
+    <div class="tags">
+        <div class="tag" onclick="showImages('all')">All</div>
+        <div class="tag" onclick="showImages('architecture')">architecture</div>
+        <div class="tag" onclick="showImages('landscape')">Landscape</div>
+        <div class="tag" onclick="showImages('people')">people</div>
+        <div class="tag" onclick="showImages('portraits')">portraits</div>
+        <div class="tag" onclick="showImages('food')">food</div>
+        <div class="tag" onclick="showImages('sports')">sports</div>
+        <div class="tag" onclick="showImages('fashion')">fashion</div>
+        <div class="tag" onclick="showImages('night')">night</div>
+
+    </div>
+    <div class="gallery" id="gallery">
+
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+
+        </ul>
+        <p>�� 2024 photoHeaven. All rights reserved.</p>
+    </footer>
+    <!-- aos js links -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 300,
+                duration: 300,
+                easing: 'ease-in-out',
+                // delay: 300,
+            }
+        );
+    </script>
+    <!-- aos links -->
+
+    <!-- javascript link -->
+    <script src="app.js"></script>
+    <!-- javascript link -->
+
+</body>
+
+</html>
