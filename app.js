@@ -1,5 +1,5 @@
 //mouse grab slider
-// script.js
+
 const slider = document.querySelector('.slider');
 let isDown = false;
 let startX;
@@ -235,4 +235,67 @@ function searchImages() {
         gallery.appendChild(galleryItem);
     });
 }
+//carousel
+function showSwiper(id) {
+    // Hide all sliders
+    const sliders = document.querySelectorAll('.fadeanimation');
+    sliders.forEach(slider => {
+        slider.style.display = 'none';
+    });
+
+    // Clear previous content in modal
+    const modalContent = document.getElementById('modal-content');
+    modalContent.innerHTML = '<button class="close-btn" onclick="closeModal()">Close</button>'; // Add close button
+
+    // Show the selected slider
+    const selectedSlider = document.getElementById(id);
+    if (selectedSlider) {
+        const sliderClone = selectedSlider.cloneNode(true);
+        sliderClone.style.display = 'block'; // Ensure the cloned slider is visible
+        modalContent.appendChild(sliderClone);
+
+        // Create and append download button
+        const downloadButton = document.createElement('button');
+        downloadButton.className = 'download-button';
+        downloadButton.textContent = 'Download Image';
+        downloadButton.onclick = () => downloadImage(getImagePath(id));
+        modalContent.appendChild(downloadButton);
+    }
+
+    // Show the modal
+    document.getElementById('modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function downloadImage(imagePath) {
+    const link = document.createElement('a');
+    link.href = imagePath;
+    link.download = imagePath.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Function to get the image path based on slider ID
+function getImagePath(id) {
+    // Return the path based on the slider ID
+    switch(id) {
+        case 'image-type-1': return './img/high resolution5.jpg';
+        case 'image-type-2': return './img/vector5.jpeg';
+        case 'image-type-3': return './img/stock photos5.jpeg';
+        case 'image-type-4': return './img/illustrations5.jpeg';
+        case 'image-type-5': return './img/icons5.jpeg';
+        case 'image-type-6': return './img/backgrounds5.jpeg';
+        case 'image-type-7': return './img/patterns5.jpeg';
+        case 'image-type-8': return './img/textures5.jpeg';
+        default: return '';
+    }
+}
+
+
+
+
 

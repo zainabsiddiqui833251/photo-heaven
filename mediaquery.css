@@ -1,0 +1,115 @@
+@media (max-width: 600px) {
+    header {
+        height: 34vw;
+    }
+
+    header .header-text h1 {
+        font-size: 6vw;
+    }
+
+    header .header-text h2 {
+        font-size: 2.5vw;
+        /* margin-top: 2%; */
+    }
+
+    .search-bar {
+        width: 26vw;
+        margin: auto;
+        /* padding: 1%; */
+        /* border-radius: 5px;
+        border: 1px solid #ddd; */
+        /* margin-top: 3vw; */
+    padding-top: 2%;
+
+    }
+
+    .search-bar #searchInput {
+        width: 18vw;
+        padding: 1%;
+        font-size: 1.5vw;
+    }
+
+    .search-bar button {
+        width: 4vw;
+        padding: 1%;
+        background: #FFC0CB;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 1.7vw;
+    }
+
+    .slide {
+        min-width: 25%;
+        height: 20vw;
+    }
+
+    .tags {
+        font-size: 2vw;
+    }
+    footer p{
+        font-size: 2.2vw;
+        margin-top: 1vw;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        height: 37vw;
+    }
+
+    header .header-text h1 {
+        font-size: 6.3vw;
+    }
+
+    .search-bar {
+        width: 30vw;
+        margin: auto;
+    /* padding-top: 2%; */
+        padding: 1%;
+        /* border-radius: 5px;
+        border: 1px solid #ddd; */
+        margin-top: 3vw;
+    }
+
+    .search-bar #searchInput {
+        width: 21vw;
+        padding: 1%;
+        font-size: 1.5vw;
+    }
+
+    .search-bar button {
+        width: 5vw;
+        padding: 1%;
+        background: #FFC0CB;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 1.5vw;
+    }
+
+    .tag {
+        font-size: 2vw;
+        margin: 1%;
+
+    }
+    .gallery-item{
+        width: 40vw;
+        height: 40vw;
+    }
+    footer i{
+        font-size: 5vw;
+    }
+    footer ul li{
+        width: 5vw;
+        height: 5vw;
+    }
+    footer p{
+        font-size: 2.7vw;
+        margin-top: 1vw;
+    }
+    .slide{
+        min-width: 30%;
+        height: 25vw;
+    }
+}
